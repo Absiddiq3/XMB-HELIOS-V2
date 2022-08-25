@@ -57,19 +57,23 @@ def stats(update, context):
 
 def start(update, context):
     buttons = ButtonMaker()
-    buttons.buildbutton("Report Group", "https://t.me/OTDiscussion")
-    buttons.buildbutton("Alt Report Group", "https://t.me/mirrorsociety")
-    buttons.buildbutton("Mirror Group", "https://t.me/dhruvmirrorupdates")
-    buttons.buildbutton("Owner", "https://t.me/dhruv444")
+    #buttons.buildbutton("Report Group", "https://t.me/OTDiscussion")
+    #buttons.buildbutton("Alt Report Group", "https://t.me/mirrorsociety")
+    buttons.buildbutton("Contact", "https://www.instagram.com/abubakar_abby/")
+    buttons.buildbutton("Owner", "https://t.me/xerysiddiq")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
-Welcome | Dhruv Mirror Bot is ready for you
+Welcome Master <b>Abubakar</b> | Xery Mirror Bot 2 is ready for you
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update.message, reply_markup)
     else:
-        sendMarkup('Sorry, You cannot use me', context.bot, update.message, reply_markup)
+        non_sudo_users=f'''
+        <b>YOU ARE NOT MASTER ABUBAKAR!!</b> 🧐
+        <b>YOU ARE NOT ALLOWED!!</b> 🚫
+        '''
+        sendMarkup(non_sudo_users, context.bot, update.message, reply_markup)
 
 def restart(update, context):
     restart_message = sendMessage("Restarting...", context.bot, update.message)
@@ -137,7 +141,7 @@ help_string_telegraph = f'''<br>
 '''
 
 help = telegraph.create_page(
-        title='Dhruv-Mirror-Bot Help',
+        title='Xery-Mirror-Bot Help',
         content=help_string_telegraph,
     )["path"]
 
