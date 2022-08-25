@@ -208,7 +208,7 @@ class MirrorListener:
                     source_link = message_args[1]
                     if is_magnet(source_link):
                         link = telegraph.create_page(
-                        title='Dhruv-Mirror Source Link',
+                        title='Xery-Mirror Source Link',
                         content=source_link,
                     )["path"]
                         buttons.buildbutton(f"🔗 Source Link 🔗", f"https://telegra.ph/{link}")
@@ -224,7 +224,7 @@ class MirrorListener:
                             source_link = reply_text.strip()
                             if is_magnet(source_link):
                                 link = telegraph.create_page(
-                                    title='Dhruv-Mirror Source Link',
+                                    title='Xery-Mirror Source Link',
                                     content=source_link,
                                 )["path"]
                                 buttons.buildbutton(f"🔗 Source Link 🔗", f"https://telegra.ph/{link}")
@@ -241,9 +241,9 @@ class MirrorListener:
             msg += f'\n<b>Total Files: </b>{folders}'
             if typ != 0:
                 msg += f'\n<b>Corrupted Files: </b>{typ}'
-            msg += f'\n\n<b>Hey </b>{self.tag} <b>Your task is Completed. Join Leech Dump if you want access to the file.</b>'
+            msg += f'\n\n<b>Hey </b>{self.tag} <b>Your task is Completed. Your File is sent to PM.</b>'
             msg += f'\n<b>It Tooks:</b> {get_readable_time(time() - self.message.date.timestamp())}'
-            msg += f'\n\n<b>Thank You For using {TITLE_NAME}! Keep Supporting & Keep Loving!</b>'
+            
             if not files:
                 sendMessage(msg, self.bot, self.message)
             else:
@@ -268,9 +268,9 @@ class MirrorListener:
             if ospath.isdir(f'{DOWNLOAD_DIR}{self.uid}/{name}'):
                 msg += f'\n<b>SubFolders: </b>{folders}'
                 msg += f'\n<b>Files: </b>{files}'
-            msg += f'\n\n<b>Hey </b>{self.tag} <b>Your task is Completed. Join Dump if you want access to the file.</b>'
+            msg += f'\n\n<b>Hey </b>{self.tag} <b>Your task is Completed. Your FILE is sent to PM.</b>'
             msg += f'\n<b>It Tooks:</b> {get_readable_time(time() - self.message.date.timestamp())}'
-            msg += f'\n\n<b>Thank You For using {TITLE_NAME}! Keep Supporting & Keep Loving!</b>'
+            
             buttons = ButtonMaker()
             link = short_url(link)
             buttons.buildbutton("☁️ Drive Link ☁️", link)
@@ -300,7 +300,7 @@ class MirrorListener:
                     mesg = message_args[1]
                     if is_magnet(mesg):
                         link = telegraph.create_page(
-                            title='Helios-Mirror Source Link',
+                            title='Xery-Mirror Source Link',
                             content=mesg,
                         )["path"]
                         buttons.buildbutton(f"🔗 Source Link 🔗", f"https://telegra.ph/{link}")
@@ -322,7 +322,7 @@ class MirrorListener:
                         source_link = reply_text.strip()
                         if is_magnet(source_link):
                             link = telegraph.create_page(
-                                title='Dhruv-Mirror Source Link',
+                                title='Xery-Mirror Source Link',
                                 content=source_link,
                             )["path"]
                             buttons.buildbutton(f"🔗 Source Link 🔗", f"https://telegra.ph/{link}")
