@@ -268,7 +268,7 @@ class MirrorListener:
             if ospath.isdir(f'{DOWNLOAD_DIR}{self.uid}/{name}'):
                 msg += f'\n<b>SubFolders: </b>{folders}'
                 msg += f'\n<b>Files: </b>{files}'
-            msg += f'\n\n<b>Hey </b>{self.tag} <b>Your task is Completed. Your FILE is sent to PM.</b>'
+            msg += f'\n\n<b>Hey </b>{self.tag} <b>Your task is Completed.\nYour File is sent in your PM.</b>'
             msg += f'\n<b>It Tooks:</b> {get_readable_time(time() - self.message.date.timestamp())}'
             
             buttons = ButtonMaker()
